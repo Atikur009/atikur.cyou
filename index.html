@@ -59,7 +59,8 @@
 <div class="sec-tag">App Download</div>
 <h2>Masjid Management APK</h2>
 <p class="sec-desc">Download the Masjid Management app for Android.</p>
-<a class="btn btn-green btn-big" href="downloads/masjid-management.apk" download>Download APK</a>
+<a class="btn btn-green btn-big" href="/api/download" download>Download APK</a>
+<p class="apk-meta" id="apk-download-count"></p>
 <p class="apk-meta">Size: 1.8 MB • Android</p>
 <p class="apk-dev">Developer: M I Salim</p>
 </div>
@@ -104,6 +105,9 @@
 
 <script>
 (function(){var s=document.querySelector('.work-slider');if(!s)return;var t=s.querySelector('.ws-track');var step=function(){return t.clientWidth*0.8;};s.querySelector('.ws-prev').addEventListener('click',function(){t.scrollBy({left:-step(),behavior:'smooth'});});s.querySelector('.ws-next').addEventListener('click',function(){t.scrollBy({left:step(),behavior:'smooth'});});})();
+</script>
+<script>
+(function(){var el=document.getElementById('apk-download-count');if(!el)return;fetch('/api/download-count').then(function(r){return r.json();}).then(function(d){var n=parseInt(d.count,10)||0;el.textContent='⬇ '+n.toLocaleString('en-US')+' downloads';}).catch(function(){});})();
 </script>
 
 <footer><div class="wrap">© 2026 Atikur Rahman · atikur.cyou — All rights reserved.</div></footer>
