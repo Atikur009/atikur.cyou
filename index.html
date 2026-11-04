@@ -66,6 +66,19 @@
 </div>
 </div></section>
 
+<section class="apk-download"><div class="wrap">
+<div class="apk-box">
+<img class="apk-icon" src="downloads/avd-icon.png" alt="All Video Downloader app icon">
+<div class="sec-tag">App Download</div>
+<h2>All Video Downloader APK</h2>
+<p class="sec-desc">Download any video from YouTube, Facebook, TikTok, Instagram and more.</p>
+<a class="btn btn-green btn-big" href="/api/avd-download" download>Download APK</a>
+<p class="apk-meta" id="avd-download-count"></p>
+<p class="apk-meta">Size: 0.26 MB • Android</p>
+<p class="apk-dev">Developer: Atikur Rahman</p>
+</div>
+</div></section>
+
 <section class="intro-video-sec"><div class="wrap">
 <div class="sec-head"><div class="sec-tag">Intro</div>
 <h2>Watch My Story</h2>
@@ -108,6 +121,7 @@
 </script>
 <script>
 (function(){var el=document.getElementById('apk-download-count');if(!el)return;fetch('/api/download-count').then(function(r){return r.json();}).then(function(d){var n=parseInt(d.count,10)||0;el.textContent='⬇ '+n.toLocaleString('en-US')+' downloads';}).catch(function(){});})();
+(function(){var el=document.getElementById('avd-download-count');if(!el)return;fetch('/api/avd-download-count').then(function(r){return r.json();}).then(function(d){var n=parseInt(d.count,10)||0;el.textContent='⬇ '+n.toLocaleString('en-US')+' downloads';}).catch(function(){});})();
 </script>
 
 <footer><div class="wrap">© 2026 Atikur Rahman · atikur.cyou — All rights reserved.</div></footer>
