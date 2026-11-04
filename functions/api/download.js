@@ -1,7 +1,7 @@
 // Counts each Masjid Management APK download (via the site button) and
 // redirects to the APK file. Requires a KV namespace bound as DOWNLOAD_COUNT.
 // If the binding is missing, the download still works, just without counting.
-export async function onRequestGet({ env }) {
+export async function onRequestGet({ request, env }) {
   const kv = env.DOWNLOAD_COUNT;
   if (kv) {
     try {
@@ -12,5 +12,8 @@ export async function onRequestGet({ env }) {
       // Counting must never break the download.
     }
   }
-  return Response.redirect("/downloads/masjid-management.apk", 302);
+  // Response.redirect needs an absolute URL on Workers.
+  const url = new URL(request.url);
+  url.pathname = "/downloads/masjid-management.apk";
+  return Response.redirect(url.toString(), 302);
 }
