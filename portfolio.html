@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio — Atikur Rahman</title>
+<meta name="description" content="Portfolio of Atikur Rahman: creative design samples, promotional posters, branding and video demonstrations. Updated with real daily work.">
+<link rel="stylesheet" href="styles.css">
+<link rel="canonical" href="https://atikur.cyou/portfolio.html">
+</head>
+<body>
+<nav><div class="wrap">
+<a class="logo" href="index.html">atikur<span>.cyou</span></a>
+<div class="navlinks">
+<a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html" class="active">Portfolio</a><a href="pages.html">Pages</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a><a href="https://panel.atikur.cyou">SMM Panel</a>
+</div></div></nav>
+
+<div class="wrap"><div class="page-head">
+<div class="sec-tag">Portfolio</div>
+<h1>My Work</h1>
+<p>Real pieces from my daily production — posters, branding and video. New work is added here regularly.</p>
+</div></div>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="filters">
+<button class="filter-btn active" data-f="all">All</button>
+<button class="filter-btn" data-f="posters">Posters & Banners</button>
+<button class="filter-btn" data-f="video">Video</button>
+</div>
+<div class="gal-grid" id="galGrid">
+<div class="gal-card" data-cat="posters"><img src="work/sample-1.png" alt="HDB plastering in progress poster" loading="lazy"><div class="cap"><span class="cat">Posters & Banners</span><b>Stage 1 — Plastering</b>HDB full repaint · Oct 18, 2026</div></div>
+<div class="gal-card" data-cat="posters"><img src="work/sample-2.png" alt="Professional HDB painting poster" loading="lazy"><div class="cap"><span class="cat">Posters & Banners</span><b>Stage 2 — Painting</b>HDB full repaint · Oct 18, 2026</div></div>
+<div class="gal-card" data-cat="posters"><img src="work/sample-3.png" alt="Plaster and paint complete poster" loading="lazy"><div class="cap"><span class="cat">Posters & Banners</span><b>Stage 3 — Complete</b>HDB full repaint · Oct 18, 2026</div></div>
+<div class="gal-card" data-cat="posters"><img src="work/hack-1.png" alt="Hacking in action poster" loading="lazy"><div class="cap"><span class="cat">Posters & Banners</span><b>Stage 1 — Hacking</b>Kindergarten renovation · Oct 18, 2026</div></div>
+<div class="gal-card" data-cat="posters"><img src="work/hack-2.png" alt="Reinstatement work poster" loading="lazy"><div class="cap"><span class="cat">Posters & Banners</span><b>Stage 2 — Reinstatement</b>Kindergarten renovation · Oct 18, 2026</div></div>
+<div class="gal-card" data-cat="posters"><img src="work/hack-3.png" alt="Renovation complete poster" loading="lazy"><div class="cap"><span class="cat">Posters & Banners</span><b>Stage 3 — Complete</b>Kindergarten renovation · Oct 18, 2026</div></div>
+<div class="gal-card" data-cat="posters"><img src="work/plumb-1.png" alt="Plumbing removal poster" loading="lazy"><div class="cap"><span class="cat">Posters & Banners</span><b>Stage 1 — Removal</b>Concealed plumbing · Oct 18, 2026</div></div>
+<div class="gal-card" data-cat="posters"><img src="work/plumb-2.png" alt="Plumbing installation poster" loading="lazy"><div class="cap"><span class="cat">Posters & Banners</span><b>Stage 2 — Installation</b>Concealed plumbing · Oct 18, 2026</div></div>
+<div class="gal-card" data-cat="posters"><img src="work/plumb-3.png" alt="Plumbing complete poster" loading="lazy"><div class="cap"><span class="cat">Posters & Banners</span><b>Stage 3 — Complete</b>Concealed plumbing · Oct 18, 2026</div></div>
+</div>
+
+<div id="videoSec">
+<div class="sec-head" style="margin-top:56px"><div class="sec-tag">Video Demonstration</div><h2>Selected video work.</h2></div>
+<div class="video-wrap" data-cat="video">
+<video controls preload="none" poster="work/sample-3.png"><source src="media/demo-before-after.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+<div class="cap"><b>Before / After Transformation Ad</b>Daily transformation-format video · Oct 18, 2026</div>
+</div>
+</div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Atikur Rahman · atikur.cyou — All rights reserved.</div></footer>
+<script>
+document.querySelectorAll('.filter-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active')});
+    btn.classList.add('active');
+    var f=btn.getAttribute('data-f');
+    document.querySelectorAll('#galGrid .gal-card').forEach(function(c){
+      c.classList.toggle('hidden', f!=='all' && c.getAttribute('data-cat')!==f);
+    });
+    document.getElementById('videoSec').classList.toggle('hidden', f!=='all' && f!=='video');
+  });
+});
+</script>
+</body></html>
