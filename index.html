@@ -79,6 +79,34 @@
 </div>
 </div></section>
 
+<section class="apk-download"><div class="wrap">
+<div class="apk-box">
+<div class="sec-tag">App Download</div>
+<h2>Pesticide Shop Calculator APK</h2>
+<p class="sec-desc">Billing, stock and due-ledger software for pesticide shops — in Bangla, with a 3-day free trial.</p>
+<a class="btn btn-green btn-big" href="/api/pesticide-download" download>Download APK</a>
+<p class="apk-meta" id="pesticide-download-count"></p>
+<p class="apk-meta">Size: 2.1 MB • Android</p>
+<a class="btn btn-green btn-big" href="https://github.com/Atikur009/pesticide-shop-calculator/releases/download/v3.5.0/pesticide-shop-calculator-windows-3.5.0.zip">Download Windows Software</a>
+<p class="apk-meta">Size: 136 MB • Windows • v3.5.0</p>
+<p class="apk-dev">Developer: Atikur Rahman</p>
+<div style="margin-top:26px;text-align:left">
+  <h3 style="margin:0 0 6px">Screenshots — ভেতরে কেমন দেখায়</h3>
+  <p class="sec-desc" style="margin:0 0 14px">আসল অ্যাপের স্ক্রিনশট — নমুনা তথ্য দিয়ে দেখানো হয়েছে।</p>
+  <div style="display:flex;gap:14px;overflow-x:auto;padding:4px 2px 12px;-webkit-overflow-scrolling:touch">
+    <figure style="margin:0;flex:0 0 auto"><img src="images/pesticide/shot-1-bill.jpg" alt="Billing screen — cart, totals and due amount" loading="lazy" style="height:420px;width:auto;border-radius:16px;border:1px solid var(--line);display:block"><figcaption style="font-size:13.5px;color:var(--muted);margin-top:8px;text-align:center">বিল — কার্ট, মোট ও বাকি</figcaption></figure>
+    <figure style="margin:0;flex:0 0 auto"><img src="images/pesticide/shot-2-catalog.jpg" alt="Product catalog — 114 products with photos and prices" loading="lazy" style="height:420px;width:auto;border-radius:16px;border:1px solid var(--line);display:block"><figcaption style="font-size:13.5px;color:var(--muted);margin-top:8px;text-align:center">পণ্যের তালিকা — ১১৪টি পণ্য</figcaption></figure>
+    <figure style="margin:0;flex:0 0 auto"><img src="images/pesticide/shot-3-stock.jpg" alt="Stock screen — stock levels and low-stock warnings" loading="lazy" style="height:420px;width:auto;border-radius:16px;border:1px solid var(--line);display:block"><figcaption style="font-size:13.5px;color:var(--muted);margin-top:8px;text-align:center">স্টক — কম স্টক সতর্কতা</figcaption></figure>
+    <figure style="margin:0;flex:0 0 auto"><img src="images/pesticide/shot-4-ledger.jpg" alt="Due ledger — customers with outstanding balance" loading="lazy" style="height:420px;width:auto;border-radius:16px;border:1px solid var(--line);display:block"><figcaption style="font-size:13.5px;color:var(--muted);margin-top:8px;text-align:center">বাকির খাতা</figcaption></figure>
+    <figure style="margin:0;flex:0 0 auto"><img src="images/pesticide/shot-5-sales.jpg" alt="Sales report — today's totals and bill history" loading="lazy" style="height:420px;width:auto;border-radius:16px;border:1px solid var(--line);display:block"><figcaption style="font-size:13.5px;color:var(--muted);margin-top:8px;text-align:center">হিসাব — আজকের বিক্রি</figcaption></figure>
+    <figure style="margin:0;flex:0 0 auto"><img src="images/pesticide/shot-6-settings.jpg" alt="Settings and backup screen" loading="lazy" style="height:420px;width:auto;border-radius:16px;border:1px solid var(--line);display:block"><figcaption style="font-size:13.5px;color:var(--muted);margin-top:8px;text-align:center">সেটিংস ও ব্যাকআপ</figcaption></figure>
+    <figure style="margin:0;flex:0 0 auto"><img src="images/pesticide/shot-7-ledger-detail.jpg" alt="Due ledger detail — page number, bill lines and payment recording" loading="lazy" style="height:420px;width:auto;border-radius:16px;border:1px solid var(--line);display:block"><figcaption style="font-size:13.5px;color:var(--muted);margin-top:8px;text-align:center">বাকির বিবরণ — পৃষ্ঠা নম্বরসহ</figcaption></figure>
+    <figure style="margin:0;flex:0 0 auto"><img src="images/pesticide/shot-8-license-plans.jpg" alt="License screen — monthly, yearly and lifetime plans with free trial" loading="lazy" style="height:420px;width:auto;border-radius:16px;border:1px solid var(--line);display:block"><figcaption style="font-size:13.5px;color:var(--muted);margin-top:8px;text-align:center">লাইসেন্স — প্ল্যান ও ফ্রি ট্রায়াল</figcaption></figure>
+  </div>
+</div>
+</div>
+</div></section>
+
 <section class="intro-video-sec"><div class="wrap">
 <div class="sec-head"><div class="sec-tag">Intro</div>
 <h2>Watch My Story</h2>
@@ -122,6 +150,7 @@
 <script>
 (function(){var el=document.getElementById('apk-download-count');if(!el)return;fetch('/api/download-count').then(function(r){return r.json();}).then(function(d){var n=parseInt(d.count,10)||0;el.textContent='⬇ '+n.toLocaleString('en-US')+' downloads';}).catch(function(){});})();
 (function(){var el=document.getElementById('avd-download-count');if(!el)return;fetch('/api/avd-download-count').then(function(r){return r.json();}).then(function(d){var n=parseInt(d.count,10)||0;el.textContent='⬇ '+n.toLocaleString('en-US')+' downloads';}).catch(function(){});})();
+(function(){var el=document.getElementById('pesticide-download-count');if(!el)return;fetch('/api/pesticide-download-count').then(function(r){return r.json();}).then(function(d){var n=parseInt(d.count,10)||0;el.textContent='⬇ '+n.toLocaleString('en-US')+' downloads';}).catch(function(){});})();
 </script>
 
 <footer><div class="wrap">© 2026 Atikur Rahman · atikur.cyou — All rights reserved.</div></footer>
